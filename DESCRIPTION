@@ -14,3 +14,4 @@ Depends:
 Encoding: UTF-8
 Collate:
     'kmmisc-package.R'
+    'ExcelDateToRDate.R'
