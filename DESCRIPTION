@@ -1,0 +1,16 @@
+Package: kmmisc
+Maintainer: Kevin Middleton <kmm@csusb.edu>
+License: GPL-2
+Title: KM Misc
+LazyData: yes
+Type: Package
+LazyLoad: yes
+Author: Kevin Middleton
+Description: Misc. functions.
+Version: 0.1-1
+Date: 2011-08-13
+Depends:
+    R (>= 2.13)
+Encoding: UTF-8
+Collate:
+    'kmmisc-package.R'
