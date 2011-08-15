@@ -1,0 +1,36 @@
+\name{DrawRegression}
+\alias{DrawRegression}
+\title{Plot a linear regression line}
+\usage{
+  DrawRegression(x, lm.obj, ylog = FALSE, lty = 1, lwd = 2)
+}
+\arguments{
+  \item{x}{vector. x values.}
+
+  \item{lm.obj}{object of class lm containing the results
+  of a linear regression}
+
+  \item{ylog}{logical. Should the y values be logged?}
+
+  \item{lty}{optional parameter for line type}
+
+  \item{lwd}{optional parameter for line width}
+}
+\description{
+  Plot a regression line not using abline().
+}
+\examples{
+set.seed(5)
+x <- rnorm(20)
+y <- 2 * x + rnorm(20)
+fm <- lm(y ~ x)
+plot(x, y)
+abline(fm)
+
+plot(x, y)
+DrawRegression(x, fm)
+}
+\author{
+  Kevin Middleton
+}
+

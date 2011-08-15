@@ -1,2 +1,4 @@
+export(DrawRegression)
+export(DrawSegment)
 export(EightBall)
 export(ExcelDateToRDate)

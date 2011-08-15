@@ -16,3 +16,5 @@ Collate:
     'kmmisc-package.R'
     'ExcelDateToRDate.R'
     'EightBall.R'
+    'DrawRegression.R'
+    'DrawSegment.R'
