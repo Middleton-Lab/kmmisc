@@ -1,6 +1,6 @@
 \name{ExcelDateToRDate}
 \alias{ExcelDateToRDate}
-\title{ExcelDateToRDate}
+\title{Convert Excel Dates to R Dates}
 \usage{
   ExcelDateToRDate(x)
 }
@@ -11,9 +11,6 @@
   x converted to R's date class.
 }
 \description{
-  Convert Excel Dates to R Dates
-}
-\details{
   This function converts numeric Excel dates to R dates
   using the appropriate offset for Excel's starting from
   1899-12-30.
