@@ -1,8 +1,6 @@
-##' Ask the Magic Eight Ball
-##'
 ##' Ask the magic eight ball a question, and it will reply.
 ##' 
-##' @title EightBall
+##' @title  Ask the Magic Eight Ball
 ##' 
 ##' @param question A string that you would like the eight ball to
 ##' evaluate.

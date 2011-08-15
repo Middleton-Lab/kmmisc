@@ -1,6 +1,6 @@
 \name{EightBall}
 \alias{EightBall}
-\title{EightBall}
+\title{Ask the Magic Eight Ball}
 \usage{
   EightBall(question)
 }
@@ -9,9 +9,6 @@
   ball to evaluate.}
 }
 \description{
-  Ask the Magic Eight Ball
-}
-\details{
   Ask the magic eight ball a question, and it will reply.
 }
 \examples{
