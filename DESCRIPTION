@@ -10,7 +10,9 @@ Description: Misc. functions.
 Version: 0.1-1
 Date: 2011-08-13
 Depends:
-    R (>= 2.13)
+    R (>= 2.13),
+    RCurl,
+    XML
 Encoding: UTF-8
 Collate:
     'kmmisc-package.R'
@@ -18,3 +20,4 @@ Collate:
     'EightBall.R'
     'DrawRegression.R'
     'DrawSegment.R'
+    'CSUSBWeather.R'

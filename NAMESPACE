@@ -1,3 +1,4 @@
+export(CSUSBWeather)
 export(DrawRegression)
 export(DrawSegment)
 export(EightBall)
