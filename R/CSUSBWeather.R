@@ -1,6 +1,7 @@
 ##' Retrieves the weather at CSUSB for today.
 ##'
 ##' @title Retrieve the daily weather at CSUSB
+##'
 ##' @return A data.frame of today's weather.
 ##' 
 ##' @author Kevin Middleton
