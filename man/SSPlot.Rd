@@ -1,0 +1,36 @@
+\name{SSPlot}
+\alias{SSPlot}
+\title{Sum of Squares Plot}
+\usage{
+  SSPlot(X, Y, b)
+}
+\arguments{
+  \item{X}{Vector of x values}
+
+  \item{Y}{Vector of y values}
+
+  \item{b}{Slope for the regression}
+}
+\description{
+  This function graphically displays the sum of squares for
+  a linear regression with a given slope (b). If the
+  manipulate function is available, an interactive plot can
+  be produced.
+}
+\examples{
+n <- 30
+X <- rnorm(n, mean = 10)
+Y <- 2.4 * X + rnorm(n, mean = 1)
+b <- 2
+SSPlot(X, Y, b)
+
+\dontrun{
+if (require(manipulate)) {
+manipulate(SSPlot(X, Y, b), b = slider(-10, 10, step = 0.1))
+}
+}
+}
+\author{
+  Kevin Middleton
+}
+
