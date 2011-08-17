@@ -1,0 +1,22 @@
+\name{Z_and_t}
+\alias{Z_and_t}
+\title{Plot the relationship between the Z and t distributions.}
+\usage{
+  Z_and_t(n)
+}
+\arguments{
+  \item{n}{numeric. Number of observations.}
+}
+\description{
+  Plot the relationship between the Z and t distributions.
+}
+\examples{
+\dontrun{
+if (require(manipulate)) {
+manipulate( Z_from_t(n), n = slider(2, 50) )
+}}
+}
+\author{
+  Kevin Middleton
+}
+

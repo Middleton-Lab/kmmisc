@@ -24,3 +24,8 @@ Collate:
     'CSUSBWeather.R'
     'SSPlot.R'
     'BinomialDistribution.R'
+    'PoissonDist.R'
+    'ChisqDist.R'
+    'NormalDist.R'
+    'NormalApproximation.R'
+    'Z_and_t.R'

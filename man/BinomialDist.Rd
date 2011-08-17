@@ -1,0 +1,31 @@
+\name{BinomialDist}
+\alias{BinomialDist}
+\title{Plot of a binomial distribution}
+\usage{
+  BinomialDist(p = 0.5, n = 18)
+}
+\arguments{
+  \item{p}{Numeric. Probability of success for each trial}
+
+  \item{n}{Numeric. Number of trials}
+}
+\description{
+  Given the probability of success \code{p} and the number
+  of trials \code{n}, this function plots the resulting
+  binomial distribution.
+}
+\examples{
+\dontrun{
+if (require(manipulate)){
+manipulate( BinomialDist(n = n), n = slider(2, 50) )
+manipulate( BinomialDist(p = p), p = slider(0, 1) )
+manipulate( BinomialDist(p = p, n = n),
+p = slider(0, 1),
+n = slider(2, 50) )
+}
+}
+}
+\author{
+  Kevin Middleton
+}
+

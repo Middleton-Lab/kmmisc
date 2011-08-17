@@ -1,0 +1,27 @@
+\name{NormalDist}
+\alias{NormalDist}
+\title{Plot a normal distribution}
+\usage{
+  NormalDist(mu, s)
+}
+\arguments{
+  \item{mu}{numeric. The mean.}
+
+  \item{s}{numeric. The standard deviation.}
+}
+\description{
+  Given a mean (\code{mu}) and standard deviation
+  (\code{s}), plot the normal distribution.
+}
+\examples{
+\dontrun{
+if (require(manipulate)) {
+manipulate(normal_dist(mu, s),
+mu = slider(-10, 10),
+s = slider(0.01, 10))
+}}
+}
+\author{
+  Kevin Middleton
+}
+

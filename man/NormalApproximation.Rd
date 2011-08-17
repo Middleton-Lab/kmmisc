@@ -1,0 +1,24 @@
+\name{NormalApproximation}
+\alias{NormalApproximation}
+\title{Normal approximation of a binomial distribution}
+\usage{
+  NormalApproximation(p)
+}
+\arguments{
+  \item{p}{numeric. Probability of success of a trial.}
+}
+\description{
+  For a probability of success (\code{p}), plot the normal
+  approximation of a binomial distribution.
+}
+\examples{
+\dontrun{
+if (require(manipulate)) {
+manipulate( normal_approx(p),
+p = slider(0.1, 0.9) )
+}}
+}
+\author{
+  Kevin Middleton
+}
+
