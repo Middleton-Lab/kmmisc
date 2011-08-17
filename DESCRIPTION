@@ -11,6 +11,7 @@ Version: 0.1-1
 Date: 2011-08-13
 Depends:
     R (>= 2.13),
+    lattice,
     RCurl,
     XML
 Encoding: UTF-8
@@ -21,3 +22,5 @@ Collate:
     'DrawRegression.R'
     'DrawSegment.R'
     'CSUSBWeather.R'
+    'SSPlot.R'
+    'BinomialDistribution.R'
