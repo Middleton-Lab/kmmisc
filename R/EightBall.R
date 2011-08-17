@@ -10,7 +10,6 @@
 ##' @export
 ##'
 ##' @examples
-##'
 ##' EightBall("Should I learn S4 methods?")
 ##' 
 EightBall <- function(question){

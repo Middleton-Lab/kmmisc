@@ -12,6 +12,8 @@
 ##' 
 ##' @author Kevin Middleton
 ##'
+##' @export
+##' 
 ##' @examples
 ##' set.seed(5)
 ##' x <- rnorm(20)
@@ -20,8 +22,6 @@
 ##'
 ##' plot(x, y)
 ##' DrawSegment(coef(fm)[2], coef(fm)[1], x)
-##'
-##' @export
 DrawSegment <- function(sl,
                         int,
                         x,

@@ -22,8 +22,7 @@
 ##' \dontrun{
 ##' if (require(manipulate)) {
 ##'   manipulate(SSPlot(X, Y, b), b = slider(-10, 10, step = 0.1))
-##' }
-##' }
+##' }}
 SSPlot <- function(X, Y, b){
   n <- length(X)
   SSy <- sum((Y - (X * b + (mean(Y) - b * mean(X))))^2)

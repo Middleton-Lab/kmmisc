@@ -17,9 +17,7 @@
 ##' max.time <- max.time[length(max.time)]
 ##' max.temp <- max(today$temp.raw)
 ##' points(max.time, max.temp, col = 'red', pch = 16, cex = 1.5)
-##' plot(today$times, today$hum.pct, type = 'l')
-##' }
-##' 
+##' plot(today$times, today$hum.pct, type = 'l')}
 CSUSBWeather <- function(){
   require(RCurl)
   require(XML)

@@ -13,8 +13,7 @@
 ##' \dontrun{
 ##' if require(manipulate){
 ##'   manipulate( poisson_dist(lambda), lambda = slider(0, 30) )
-##' }
-##' }
+##' }}
 PoissonDist <- function (lambda){
   nmax <- 30
   barplot(dpois(0:nmax, lambda = lambda),

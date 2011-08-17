@@ -10,6 +10,8 @@
 ##'  
 ##' @author Kevin Middleton
 ##'
+##' @export
+##' 
 ##' @examples
 ##' set.seed(5)
 ##' x <- rnorm(20)
@@ -20,9 +22,6 @@
 ##'
 ##' plot(x, y)
 ##' DrawRegression(x, fm)
-##'
-##' @export
-##' 
 DrawRegression <- function(x,
                            lm.obj,
                            ylog = FALSE,
