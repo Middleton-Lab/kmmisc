@@ -9,6 +9,7 @@
 ##' @export
 ##'
 ##' @examples
+##' \dontrun{
 ##' today <- CSUSBWeather()
 ##' par(mfrow = c(2, 1))
 ##' plot(today$times, today$temp.raw, type = 'l')
@@ -17,6 +18,7 @@
 ##' max.temp <- max(today$temp.raw)
 ##' points(max.time, max.temp, col = 'red', pch = 16, cex = 1.5)
 ##' plot(today$times, today$hum.pct, type = 'l')
+##' }
 ##' 
 CSUSBWeather <- function(){
   require(RCurl)
