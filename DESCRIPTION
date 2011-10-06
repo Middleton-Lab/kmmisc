@@ -6,9 +6,9 @@ LazyData: yes
 Type: Package
 LazyLoad: yes
 Author: Kevin Middleton
-Description: Misc. functions.
-Version: 0.1-1
-Date: 2011-08-13
+Description: My miscellaneous functions
+Version: 0.1-2
+Date: 2011-10-06
 Depends:
     R (>= 2.13),
     lattice,
@@ -16,16 +16,17 @@ Depends:
     XML
 Encoding: UTF-8
 Collate:
-    'kmmisc-package.R'
-    'ExcelDateToRDate.R'
-    'EightBall.R'
+    'kmmisc.R'
+    'BinomialDistribution.R'
+    'ChisqDist.R'
+    'CSUSBWeather.R'
     'DrawRegression.R'
     'DrawSegment.R'
-    'CSUSBWeather.R'
-    'SSPlot.R'
-    'BinomialDistribution.R'
-    'PoissonDist.R'
-    'ChisqDist.R'
-    'NormalDist.R'
+    'EightBall.R'
+    'ExcelDateToRDate.R'
     'NormalApproximation.R'
+    'NormalDist.R'
+    'PoissonDist.R'
+    'SSPlot.R'
     'Z_and_t.R'
+    'phyl.RMA.btest.R'

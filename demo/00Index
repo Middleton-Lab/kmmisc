@@ -1,2 +1,3 @@
 multicore	Demo of multicore package.
 snow		Demo of snow and rbenchmark packages.
+repeatability	Demo of different ways to calculate repeatability.

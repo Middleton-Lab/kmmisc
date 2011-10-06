@@ -1,20 +1,20 @@
 \docType{package}
 \name{kmmisc-package}
 \alias{kmmisc-package}
-\title{KM Misc}
+\title{kmmisc}
 \description{
-  Misc. Functions
+  Miscellaneous functions
 }
 \details{
   \tabular{ll}{ Package: \tab kmmisc\cr Type: \tab
-  Package\cr Version: \tab 0.1-1\cr Date: \tab
-  2011-08-13\cr License: \tab GPL-2\cr LazyLoad: \tab
+  Package\cr Version: \tab 0.1-2\cr Date: \tab
+  2011-10-06\cr License: \tab GPL-2\cr LazyLoad: \tab
   yes\cr LazyData: \tab yes\cr }
 }
 \author{
-  Kevin Middleton (kmm@csusb.edu)
+  Kevin Middleton \email{kmm@csusb.edu}
 
-  Maintainer: Kevin Middleton (kmm@csusb.edu)
+  Maintainer: Kevin Middleton \email{kmm@csusb.edu}
 }
 \keyword{package}
 
