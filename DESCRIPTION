@@ -10,7 +10,8 @@ Description: My miscellaneous functions
 Version: 0.1-2
 Date: 2011-10-06
 Depends:
-    R (>= 2.13),
+    R (>= 2.14),
+    abd,
     lattice,
     RCurl,
     XML
@@ -30,3 +31,4 @@ Collate:
     'SSPlot.R'
     'Z_and_t.R'
     'phyl.RMA.btest.R'
+    'expand.dft.R'
