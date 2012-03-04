@@ -14,8 +14,8 @@
 \examples{
 \dontrun{
 if (require(manipulate)) {
-manipulate( normal_approx(p),
-p = slider(0.1, 0.9) )
+  manipulate( normal_approx(p),
+             p = slider(0.1, 0.9) )
 }}
 }
 \author{

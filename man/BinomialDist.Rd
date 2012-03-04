@@ -17,11 +17,11 @@
 \examples{
 \dontrun{
 if (require(manipulate)){
-manipulate( BinomialDist(n = n), n = slider(2, 50) )
-manipulate( BinomialDist(p = p), p = slider(0, 1) )
-manipulate( BinomialDist(p = p, n = n),
-p = slider(0, 1),
-n = slider(2, 50) )
+  manipulate( BinomialDist(n = n), n = slider(2, 50) )
+  manipulate( BinomialDist(p = p), p = slider(0, 1) )
+  manipulate( BinomialDist(p = p, n = n),
+                           p = slider(0, 1),
+                           n = slider(2, 50) )
 }
 }
 }

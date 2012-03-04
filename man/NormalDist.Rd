@@ -16,9 +16,9 @@
 \examples{
 \dontrun{
 if (require(manipulate)) {
-manipulate(normal_dist(mu, s),
-mu = slider(-10, 10),
-s = slider(0.01, 10))
+  manipulate(normal_dist(mu, s),
+             mu = slider(-10, 10),
+             s = slider(0.01, 10))
 }}
 }
 \author{

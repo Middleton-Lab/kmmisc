@@ -15,7 +15,7 @@
 \examples{
 \dontrun{
 if require(manipulate){
-manipulate( poisson_dist(lambda), lambda = slider(0, 30) )
+  manipulate( poisson_dist(lambda), lambda = slider(0, 30) )
 }}
 }
 \author{

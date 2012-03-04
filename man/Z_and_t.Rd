@@ -13,7 +13,7 @@
 \examples{
 \dontrun{
 if (require(manipulate)) {
-manipulate( Z_from_t(n), n = slider(2, 50) )
+  manipulate( Z_from_t(n), n = slider(2, 50) )
 }}
 }
 \author{

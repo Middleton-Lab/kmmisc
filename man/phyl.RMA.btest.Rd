@@ -2,8 +2,8 @@
 \alias{phyl.RMA.btest}
 \title{Slope tests for phylogenetic RMA}
 \usage{
-  phyl.RMA.btest(x, y, tree, b0 = 0, n = 1000, makeplot =
-  TRUE)
+  phyl.RMA.btest(x, y, tree, b0 = 0, n = 1000,
+    makeplot = TRUE)
 }
 \arguments{
   \item{x}{x variable}

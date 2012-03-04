@@ -1,0 +1,48 @@
+\name{expand.dft}
+\alias{expand.dft}
+\title{Expand a data.frame}
+\usage{
+  expand.dft(x, col.exp, na.strings = "NA", as.is = FALSE,
+    dec = ".")
+}
+\arguments{
+  \item{x}{a \code{data.frame}}
+
+  \item{col.exp}{a character string of the column name or
+  the column number to use for "expansion"}
+
+  \item{na.strings}{passed to \code{type.convert}}
+
+  \item{as.is}{passed to \code{type.convert}}
+
+  \item{dec}{passed to \code{type.convert}}
+}
+\value{
+  DF a \code{data.frame} of \code{x} in "long" format.
+}
+\description{
+  This function expands a \code{data.frame} based on a
+  column (\code{col.exp}). Useful for generating long
+  tables from contingency tables.
+}
+\examples{
+OCAD <- data.frame(Sex = c("Male", "Female", "Male", "Female"),
+                   Status = c("Present", "Present", "Absent", "Absent"),
+                   Count = c(92, 15, 21, 20))
+OCAD <- expand.dft(OCAD, col.exp = "Count")
+table(OCAD)
+}
+\author{
+  Modified for the \code{abd} package by Kevin Middleton
+  from a function posted by Marc Schwartz to the r-help
+  mailing list.
+}
+\references{
+  See
+  \url{https://stat.ethz.ch/pipermail/r-help/2009-January/185561.html}
+  for discussion of \code{expand.dft()}.
+}
+\seealso{
+  \code{\link{table}}
+}
+

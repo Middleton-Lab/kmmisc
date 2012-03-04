@@ -14,7 +14,7 @@
 \examples{
 \dontrun{
 if (require(manipulate)) {
-manipulate( chisq_dist(df), df = slider(1, 20) )
+  manipulate( chisq_dist(df), df = slider(1, 20) )
 }}
 }
 \author{

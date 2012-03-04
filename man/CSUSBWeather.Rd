@@ -1,6 +1,9 @@
 \name{CSUSBWeather}
 \alias{CSUSBWeather}
 \title{Retrieve the daily weather at CSUSB}
+\usage{
+  CSUSBWeather()
+}
 \value{
   A data.frame of today's weather.
 }
