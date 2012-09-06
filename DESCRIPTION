@@ -1,5 +1,5 @@
 Package: kmmisc
-Maintainer: Kevin Middleton <kmm@csusb.edu>
+Maintainer: Kevin Middleton <middletonk@missouri.edu>
 License: GPL-2
 Title: KM Misc
 LazyData: yes
@@ -7,19 +7,16 @@ Type: Package
 LazyLoad: yes
 Author: Kevin Middleton
 Description: My miscellaneous functions
-Version: 0.1-2
-Date: 2011-10-06
+Version: 0.1-3
+Date: 2012-09-06
 Depends:
-    R (>= 2.14),
-    lattice,
-    RCurl,
-    XML
+    R (>= 2.15),
+    lattice
 Encoding: UTF-8
 Collate:
     'kmmisc.R'
     'BinomialDistribution.R'
     'ChisqDist.R'
-    'CSUSBWeather.R'
     'DrawRegression.R'
     'DrawSegment.R'
     'EightBall.R'
