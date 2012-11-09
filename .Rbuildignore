@@ -1,1 +1,8 @@
 ^\.Rproj\.user$
+^.*\.Rproj$
+^\..*\.swp$
+^\..*\.swo$
+^abd.*\.gz$
+^\.gitignore$
+^\.git$
+^README\.md$
