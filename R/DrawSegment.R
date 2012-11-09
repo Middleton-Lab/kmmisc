@@ -1,4 +1,4 @@
-##' Draws a line segment of a given slope and intercept only over the
+##' Draws a line segment of a given slope and intercept only over the 
 ##' range of data present in vector x.
 ##' 
 ##' @title Draw a line segment
@@ -10,7 +10,7 @@
 ##' @param lty optional parameter for line type
 ##' @param lwd optional parameter for line width
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##' 

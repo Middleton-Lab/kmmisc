@@ -42,7 +42,7 @@ require(phytools)
 phyl.RMA.btest(x, y, tree, b0 = 2, n = 50)}
 }
 \author{
-  Kevin Middleton
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 \seealso{
   \code{\link[phytools]{phyl.RMA}}

@@ -5,7 +5,7 @@
 ##' 
 ##' @param lambda Numeric. Mean number of successes per interval.
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'

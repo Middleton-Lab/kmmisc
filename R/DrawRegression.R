@@ -2,13 +2,13 @@
 ##' 
 ##' @title Plot a linear regression line
 ##' @param x vector. x values.
-##' @param lm.obj object of class lm containing the results of a
-##' linear regression
+##' @param lm.obj object of class lm containing the results of a 
+##'   linear regression
 ##' @param ylog logical. Should the y values be logged?
 ##' @param lty optional parameter for line type
 ##' @param lwd optional parameter for line width
 ##'  
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##' 

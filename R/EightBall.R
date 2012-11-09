@@ -5,7 +5,7 @@
 ##' @param question A string that you would like the eight ball to
 ##' evaluate.
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'

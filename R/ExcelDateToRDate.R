@@ -1,4 +1,4 @@
-##' This function converts numeric Excel dates to R dates using the
+##' This function converts numeric Excel dates to R dates using the 
 ##' appropriate offset for Excel's starting from 1899-12-30.
 ##' 
 ##' @title Convert Excel Dates to R Dates
@@ -9,6 +9,8 @@
 ##'
 ##' @references See \url{http://markmail.org/message/zcydoj6nvtqe57xl}
 ##'
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+##' 
 ##' @keywords data
 ##' 
 ##' @export

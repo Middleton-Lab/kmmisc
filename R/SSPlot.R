@@ -1,5 +1,5 @@
 ##' This function graphically displays the sum of squares for a linear
-##' regression with a given slope (b). If the manipulate function is
+##' regression with a given slope (b). If the manipulate function is 
 ##' available, an interactive plot can be produced.
 ##'
 ##' @title Sum of Squares Plot
@@ -8,7 +8,7 @@
 ##' @param Y Vector of y values
 ##' @param b Slope for the regression
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##' 

@@ -31,6 +31,6 @@ plot(x, y)
 DrawRegression(x, fm)
 }
 \author{
-  Kevin Middleton
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 

@@ -5,7 +5,7 @@
 ##' 
 ##' @param df Degrees of freedom
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'

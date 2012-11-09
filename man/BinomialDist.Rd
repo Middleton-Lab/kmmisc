@@ -26,6 +26,6 @@ if (require(manipulate)){
 }
 }
 \author{
-  Kevin Middleton
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 

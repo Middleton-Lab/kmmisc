@@ -6,7 +6,7 @@
 ##' @param p Numeric. Probability of success for each trial
 ##' @param n Numeric. Number of trials
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'

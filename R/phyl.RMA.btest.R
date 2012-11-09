@@ -23,7 +23,8 @@ phyl.RMA.t <- function(x,
 ##' \item{p}{P-value determined by randomization}
 ##' \item{ts}{a vector of t-sttistics}
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+##' 
 ##' @seealso \code{\link[phytools]{phyl.RMA}}
 ##'
 ##' @export

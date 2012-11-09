@@ -1,15 +1,5 @@
-if (require(abd)){
-  data(WalkingStickFemurs)
-  Error.fit <- aov(femur.length ~ 1 + Error(specimen), 
-                   data = WalkingStickFemurs)
-  vc <- varcomps(Error.fit, n = 2)
-  vc
-  repeatability(vc)
-} else {
-  stop("Please install the package: abd")
-}
-
-if (require(rptR){
+if (require(rptR))
+{
   rpt(WalkingStickFemurs$femur.length, WalkingStickFemurs$specimen, 
       datatype = "Gaussian", method = "ANOVA")
   ## R  = 0.748
@@ -20,10 +10,12 @@ if (require(rptR){
       datatype = "Gaussian", method = "REML")
   ## R  = 0.748
 } else {
-  stop("Please install the package: rptR")
+  stop("Please install the package: rptR\n
+       install.packages('rptR', repos='http://R-Forge.R-project.org')")
 }
 
-if (require(ICC)){
+if (require(ICC))
+{
   ICCbare(specimen, femur.length, WalkingStickFemurs)
   ## [1] 0.7475028
 } else {

@@ -31,6 +31,6 @@ plot(x, y)
 DrawSegment(coef(fm)[2], coef(fm)[1], x)
 }
 \author{
-  Kevin Middleton
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 

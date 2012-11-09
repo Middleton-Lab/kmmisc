@@ -4,7 +4,7 @@
 ##' 
 ##' @param n numeric. Number of observations.
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'

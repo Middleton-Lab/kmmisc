@@ -15,6 +15,9 @@
   using the appropriate offset for Excel's starting from
   1899-12-30.
 }
+\author{
+  Kevin Middleton (\email{middletonk@missouri.edu})
+}
 \references{
   See \url{http://markmail.org/message/zcydoj6nvtqe57xl}
 }

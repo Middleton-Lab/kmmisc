@@ -1,11 +1,11 @@
-##' For a probability of success (\code{p}), plot the normal
+##' For a probability of success (\code{p}), plot the normal 
 ##' approximation of a binomial distribution.
 ##'
 ##' @title Normal approximation of a binomial distribution
 ##' 
 ##' @param p numeric. Probability of success of a trial.
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'

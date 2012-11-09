@@ -13,11 +13,13 @@
 ##' 
 ##' @return DF a \code{data.frame} of \code{x} in "long" format.
 ##' 
-##' @references See \url{https://stat.ethz.ch/pipermail/r-help/2009-January/185561.html} for discussion of \code{expand.dft()}.
+##' @references See
+##'   \url{https://stat.ethz.ch/pipermail/r-help/2009-January/185561.html}
+##'   for discussion of \code{expand.dft()}.
 ##' 
 ##' @author Modified for the \code{abd} package by Kevin Middleton 
-##' from a function posted by Marc Schwartz to the r-help mailing 
-##' list.
+##'   from a function posted by Marc Schwartz to the r-help mailing 
+##'   list.
 ##' 
 ##' @seealso \code{\link{table}}
 ##' 

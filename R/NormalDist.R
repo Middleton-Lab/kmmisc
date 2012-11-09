@@ -1,4 +1,4 @@
-##' Given a mean (\code{mu}) and standard deviation (\code{s}), plot
+##' Given a mean (\code{mu}) and standard deviation (\code{s}), plot 
 ##' the normal distribution.
 ##'
 ##' @title Plot a normal distribution
@@ -6,7 +6,7 @@
 ##' @param mu numeric. The mean.
 ##' @param s numeric. The standard deviation.
 ##' 
-##' @author Kevin Middleton
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##'
 ##' @export
 ##'
