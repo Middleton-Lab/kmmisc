@@ -1,0 +1,40 @@
+\name{plot_mrb}
+\alias{plot_mrb}
+\title{Plot MrBayes log file}
+\usage{
+  plot_mrb(logfile = NULL, burnin = 0.25, lwd = 1.5,
+    cutoff = 0.05, ideal = 0.01, ...)
+}
+\arguments{
+  \item{logfile}{The MrBayes log file to be loaded. If
+  \code{logfile = NULL}, then the user is prompted to
+  choose a file.}
+
+  \item{burnin}{The burnin period, either specified in
+  absolute number of generations or as a fraction of the
+  total number of generations (\code{burnin} < 1). The
+  default is 0.25.}
+
+  \item{lwd}{Line width for the plot. Defaults to 1.5.}
+
+  \item{cutoff}{The minimum value for acceptable
+  convergence. Only applicable for mcmc files. Defaults to
+  0.05.}
+
+  \item{ideal}{The ideal value for acceptable convergence.
+  Only applicable for mcmc files. Defaults to 0.01.}
+
+  \item{...}{Additional options. Currently unused.}
+}
+\description{
+  This function plots a MrBayes log file. Either a .mcmc
+  file or a .p file is acceptable, and the file type will
+  be determined automatically. If an mcmc file is chosen,
+  the average standard deviation of the split frequencies
+  is plotted. If a p file is chosen, the log-likelihood is
+  plotted.
+}
+\author{
+  Kevin Middleton
+}
+

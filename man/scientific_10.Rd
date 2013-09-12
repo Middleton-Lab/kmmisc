@@ -1,0 +1,19 @@
+\name{scientific_10}
+\alias{scientific_10}
+\title{Format as base 10 exponent}
+\usage{
+  scientific_10(x)
+}
+\arguments{
+  \item{x}{numeric to be reformatted.}
+}
+\description{
+  This function is intended to be used with
+  scale_continuous from the ggplot2 package to reformat
+  axis labels as base-10 exponents. See
+  \url{http://goo.gl/fNMKjB} for more information.
+}
+\author{
+  Kevin Middleton
+}
+
