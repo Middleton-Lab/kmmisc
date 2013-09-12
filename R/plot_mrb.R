@@ -45,15 +45,21 @@ plot_mrb <- function(logfile = NULL,
     logfile <- file.choose(new = FALSE)
   }
   
+  ext <- file_ext(logfile)
+    
+  if (!(ext %in% c("mcmc", "p"))) {
+    stop("File should be either a .mcmc or .p file.")
+  }
+  
   # .mcmc has 6 header rows. .p has 1.
-  nskip <- ifelse(file_ext(logfile) == "mcmc", 6, 1)
+  nskip <- ifelse(ext == "mcmc", 6, 1)
   mb_log <- read.table(logfile,
                        header = TRUE,
                        skip = nskip)
   
-  # For .mcmc, choose standard deviation of split frequency. For .p
-  # choose LnL. Then subset mb_log
-  col_to_plot <- ifelse(file_ext(logfile) == "mcmc",
+  # For .mcmc, choose standard deviation of split frequency. For .p 
+  # choose LnL. Then subset mb_log.
+  col_to_plot <- ifelse(ext == "mcmc",
                         "AvgStdDev.s.", "LnL")
   mb_log <- mb_log[, c("Gen", col_to_plot)]
   
@@ -67,12 +73,13 @@ plot_mrb <- function(logfile = NULL,
     burnin_gen <- burnin
   }
   label_txt <- paste("burnin ", burnin_gen, sep = "")
-  ylabel <- ifelse(file_ext(logfile) == "mcmc",
+  ylabel <- ifelse(ext == "mcmc",
                    "Average SD of Split Frequencies",
                    "Log-likelihood")
   
   p <- ggplot(mb_log, aes_string(x = "Gen", y = "parameter")) + 
-    geom_vline(xintercept = burnin_gen, color = I("blue"), lwd = lwd) +
+    geom_vline(xintercept = burnin_gen,
+               color = I("blue"), lwd = lwd) +
     geom_line(lwd = lwd) +
     ylab(ylabel) + xlab("Generation") + 
     scale_x_continuous(label = scientific_10) +
@@ -80,10 +87,12 @@ plot_mrb <- function(logfile = NULL,
              x = (burnin_gen - 0.08 * burnin_gen),
              y = max(mb_log$parameter),
              size = 8, colour = "blue", angle = 90, hjust = 1)
-  if (file_ext(logfile) == "mcmc") {
+  if (ext == "mcmc") {
     p <- p +
-      geom_hline(yintercept = cutoff, color = I("yellow"), lwd = lwd) +
-      geom_hline(yintercept = ideal, color = I("red"), lwd = lwd)
+      geom_hline(yintercept = cutoff,
+                 color = I("yellow"), lwd = lwd) +
+      geom_hline(yintercept = ideal,
+                 color = I("red"), lwd = lwd)
   }
   print(p)
 }
