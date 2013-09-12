@@ -3,7 +3,7 @@
 \title{Plot MrBayes log file}
 \usage{
   plot_mrb(logfile = NULL, burnin = 0.25, lwd = 1.5,
-    cutoff = 0.05, ideal = 0.01, ...)
+    cutoff = 0.05, ideal = 0.01)
 }
 \arguments{
   \item{logfile}{The MrBayes log file to be loaded. If
@@ -23,8 +23,6 @@
 
   \item{ideal}{The ideal value for acceptable convergence.
   Only applicable for mcmc files. Defaults to 0.01.}
-
-  \item{...}{Additional options. Currently unused.}
 }
 \description{
   This function plots a MrBayes log file. Either a .mcmc
@@ -35,6 +33,6 @@
   plotted.
 }
 \author{
-  Kevin Middleton
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 

@@ -14,6 +14,6 @@
   \url{http://goo.gl/fNMKjB} for more information.
 }
 \author{
-  Kevin Middleton
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 
