@@ -2,6 +2,7 @@ phyl.RMA.t <- function(x,
                        y,
                        tree,
                        b0 = 0) {
+  require("phytools")
   b <- phyl.RMA(x, y, tree)$RMA.beta[2]
   fm <- lm(y ~ x)
   summary.fm <- summary(fm)
@@ -48,6 +49,7 @@ phyl.RMA.btest <- function(x,
                            b0 = 0,
                            n = 1000,
                            makeplot = TRUE) {
+  require("phytools")
   ts <- numeric(length = n)
   for (i in seq_len(n)){
     yrand <- sample(y)
@@ -58,8 +60,8 @@ phyl.RMA.btest <- function(x,
   ts <- abs(ts)
   p <- mean(ts[1] > ts)
   if (makeplot) {
-    hist(btest$ts)
-    abline(v = btest$ts[1], col = "red")
+    hist(ts)
+    abline(v = ts[1], col = "red")
   }
   return(list(p = p, ts = ts))
 }
