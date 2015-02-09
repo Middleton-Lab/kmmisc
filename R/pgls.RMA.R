@@ -1,19 +1,19 @@
-pgls.RMA <- function(fm, h0 = 1, param.CI = 0.95){
-  if (!inherits(fm,"pgls")){
-    stop("'fm' must be of class 'pgls'.")
+pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
+  if (!inherits(object,"pgls")){
+    stop("'object' must be of class 'pgls'.")
   }
   
-  r2 <- summary(fm)$r.squared
+  r2 <- summary(object)$r.squared
   
   # RMA b
-  b <- as.numeric(coef(fm)[2] / sqrt(r2))
+  b <- as.numeric(coef(object)[2] / sqrt(r2))
   
   # SEb
-  SEb <- as.numeric(fm$sterr[2])
+  SEb <- as.numeric(object$sterr[2])
   
   # df
-  df <- summary(fm)$df[2]
-  df_phyl <- 2 + (length(fm$data$phy$tip.label) - 2) / 
+  df <- summary(object)$df[2]
+  df_phyl <- 2 + (length(object$data$phy$tip.label) - 2) / 
     (1 + 0.5 * r2)
   
   # CI
@@ -23,7 +23,7 @@ pgls.RMA <- function(fm, h0 = 1, param.CI = 0.95){
   # Test vs. h0
   # Following phytools::phyl.RMA()
   t <- abs(log(abs(b)) - log(abs(h0))) / 
-    sqrt((1 - r2) / (length(fm$data$phy$tip.label) - 2))
+    sqrt((1 - r2) / (length(object$data$phy$tip.label) - 2))
   P <- 2 * pt(t, df = df_phyl, lower.tail = FALSE)
   
   outlist <- list(b.RMA = b,
