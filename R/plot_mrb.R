@@ -35,9 +35,6 @@ plot_mrb <- function(logfile = NULL,
                      lwd = 1.5,
                      cutoff = 0.05,
                      ideal = 0.01){
-  require("ggplot2")
-  require("scales")
-  require("tools")
   
   if (is.null(logfile)){
     cat("\n\n\tChoose the .p or .mcmc file\n\n")
