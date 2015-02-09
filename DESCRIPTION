@@ -7,15 +7,15 @@ Type: Package
 LazyLoad: yes
 Author: Kevin Middleton
 Description: My miscellaneous functions
-Version: 0.1-4
-Date: 2013-09-12
+Version: 0.1-5
+Date: 2015-02-09
 Depends:
     R (>= 3.0),
     lattice,
     ggplot2,
     scales,
     tools,
-    phytools
+    caper
 Encoding: UTF-8
 Collate:
     'kmmisc.R'
@@ -30,6 +30,5 @@ Collate:
     'PoissonDist.R'
     'SSPlot.R'
     'Z_and_t.R'
-    'phyl.RMA.btest.R'
     'expand.dft.R'
     'plot_mrb.R'
