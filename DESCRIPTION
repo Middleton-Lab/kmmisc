@@ -31,4 +31,5 @@ Collate:
     'SSPlot.R'
     'Z_and_t.R'
     'expand.dft.R'
+    'pgls.RMA.R'
     'plot_mrb.R'

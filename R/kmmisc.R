@@ -17,4 +17,6 @@
 ##' @docType package
 ##' @title kmmisc
 ##' @keywords package
+##' @import lattice ggplot2 scales tools caper
+
 NULL
