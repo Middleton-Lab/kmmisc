@@ -2,14 +2,14 @@
 % Please edit documentation in R/pgls.RMA.R
 \name{pgls.RMA}
 \alias{pgls.RMA}
-\alias{pgls.rma}
-\alias{print.pgls.rma}
+\alias{print.pgls.RMA}
 \title{Phylogenetic RMA regression}
 \usage{
 pgls.RMA(object, h0 = 1, param.CI = 0.95)
 }
 \arguments{
-\item{object}{an object containing the results returned by \code{pgls()}.}
+\item{object}{an object containing the results returned by
+\code{pgls()}.}
 
 \item{h0}{Null slope for hypothesis test. Defaults to 1.}
 
