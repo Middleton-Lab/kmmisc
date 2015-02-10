@@ -16,6 +16,7 @@
 ##' \item{b.RMA}{RMA slope estimate}
 ##' \item{lower}{lower bound of the confidence interval}
 ##' \item{upper}{upper bound of the confidence interval}
+##' \item{b0}{intercept estimate}
 ##' \item{param.CI}{level for confidence interval}
 ##' \item{h0}{null slope for hypothesis test}
 ##' \item{df}{non-phylogenetic degrees of freedom}
@@ -36,11 +37,21 @@ pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
   
   r2 <- summary(object)$r.squared
   
-  # RMA b
-  b <- as.numeric(coef(object)[2] / sqrt(r2))
+  yvar <- all.vars(terms(object$formula))[1]
+  xvar <- all.vars(terms(object$formula))[2]
+  y <- object$y
+  x <- object$x[, xvar]
+  names(y) <- object$data$phy$tip.label
+  names(x) <- object$data$phy$tip.label
   
-  # SEb
-  SEb <- as.numeric(object$sterr[2])
+  rma.betas <- phyl.RMA(x, y, object$data$phy)$RMA.beta
+  
+  # RMA betas
+  b0 <- rma.betas[1]
+  b1 <- rma.betas[2]
+  
+  # SEb1
+  SEb1 <- as.numeric(object$sterr[2])
   
   # df
   df <- summary(object)$df[2]
@@ -48,18 +59,19 @@ pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
     (1 + 0.5 * r2)
   
   # CI
-  lower <- b - qt(1 - (1 - param.CI)/2, df = df_phyl) * SEb
-  upper <- b + qt(1 - (1 - param.CI)/2, df = df_phyl) * SEb
+  lower <- b1 - qt(1 - (1 - param.CI)/2, df = df_phyl) * SEb1
+  upper <- b1 + qt(1 - (1 - param.CI)/2, df = df_phyl) * SEb1
   
   # Test vs. h0
   # Following phytools::phyl.RMA()
-  t <- abs(log(abs(b)) - log(abs(h0))) / 
+  t <- abs(log(abs(b1)) - log(abs(h0))) / 
     sqrt((1 - r2) / (length(object$data$phy$tip.label) - 2))
   P <- 2 * pt(t, df = df_phyl, lower.tail = FALSE)
   
-  outlist <- list(b.RMA = b,
+  outlist <- list(slope.RMA = b1,
                   lower = lower,
                   upper = upper,
+                  intercept = b0,
                   param.CI = param.CI,
                   h0 = h0,
                   df = df,
@@ -77,8 +89,10 @@ print.pgls.RMA <- function(x, digits = 4, ...){
   cat(x$param.CI, "Confidence Interval\n")
   cat("Lower\t Beta\t Upper\n")
   cat(format(x$lower, digits = digits), "\t",
-      format(x$b.RMA, digits = digits), "\t",
+      format(x$slope.RMA, digits = digits), "\t",
       format(x$upper, digits = digits), "\n")
+  cat("\n")
+  cat("Intercept =", x$intercept, "\n")
   cat("\n")
   cat("h0\t df\t t\t P\n")
   cat(format(x$h0, digits = digits), "\t",

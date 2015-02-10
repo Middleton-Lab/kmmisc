@@ -20,6 +20,7 @@ an object of class \code{pgls.rma}. Containing:
 \item{b.RMA}{RMA slope estimate}
 \item{lower}{lower bound of the confidence interval}
 \item{upper}{upper bound of the confidence interval}
+\item{b0}{intercept estimate}
 \item{param.CI}{level for confidence interval}
 \item{h0}{null slope for hypothesis test}
 \item{df}{non-phylogenetic degrees of freedom}
