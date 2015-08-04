@@ -1,5 +1,7 @@
 # kmmisc #
 
+[![Build Status](https://travis-ci.org/kmiddleton/kmmisc.png?branch=master)](https://travis-ci.org/kmiddleton/kmmisc)
+
 An R package that contains miscellaneous functions I find useful.
 
 # Installation #
