@@ -3,8 +3,8 @@
 ##' \tabular{ll}{
 ##' Package: \tab kmmisc\cr
 ##' Type: \tab Package\cr
-##' Version: \tab 0.1-5\cr
-##' Date: \tab 2015-02-09\cr
+##' Version: \tab 0.1-6\cr
+##' Date: \tab 2015-08-13\cr
 ##' License: \tab GPL-2\cr
 ##' LazyLoad: \tab yes\cr
 ##' LazyData: \tab yes\cr
@@ -17,6 +17,6 @@
 ##' @docType package
 ##' @title kmmisc
 ##' @keywords package
-##' @import lattice ggplot2 scales tools caper
+##' @import lattice ggplot2 scales tools ape
 
 NULL

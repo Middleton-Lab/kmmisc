@@ -7,18 +7,23 @@ Type: Package
 LazyLoad: yes
 Author: Kevin Middleton
 Description: My miscellaneous functions
-Version: 0.1-5
-Date: 2015-02-09
+Version: 0.1-6
+Date: 2015-08-13
 Depends:
     R (>= 3.0),
     lattice,
     ggplot2,
     scales,
     tools,
-    caper
+    ape
+Imports:
+    caper,
+    phytools,
+    smatr
 Encoding: UTF-8
 Collate:
     'kmmisc.R'
+    'Assymptotic.R'
     'BinomialDistribution.R'
     'ChisqDist.R'
     'DrawRegression.R'
