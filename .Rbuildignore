@@ -2,7 +2,7 @@
 ^.*\.Rproj$
 ^\..*\.swp$
 ^\..*\.swo$
-^abd.*\.gz$
 ^\.gitignore$
 ^\.git$
 ^README\.md$
+^.travis.yml$
