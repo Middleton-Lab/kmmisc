@@ -1,28 +1,28 @@
-##' This function graphically displays the sum of squares for a linear
-##' regression with a given slope (b). If the manipulate function is 
-##' available, an interactive plot can be produced.
-##'
-##' @title Sum of Squares Plot
-##'
-##' @param X Vector of x values
-##' @param Y Vector of y values
-##' @param b Slope for the regression
-##' 
-##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
-##'
-##' @export
-##' 
-##' @examples
-##' n <- 30
-##' X <- rnorm(n, mean = 10)
-##' Y <- 2.4 * X + rnorm(n, mean = 1)
-##' b <- 2
-##' SSPlot(X, Y, b)
-##'
-##' \dontrun{
-##' if (require(manipulate)) {
-##'   manipulate(SSPlot(X, Y, b), b = slider(-10, 10, step = 0.1))
-##' }}
+#' This function graphically displays the sum of squares for a linear
+#' regression with a given slope (b). If the manipulate function is 
+#' available, an interactive plot can be produced.
+#'
+#' @title Sum of Squares Plot
+#'
+#' @param X Vector of x values
+#' @param Y Vector of y values
+#' @param b Slope for the regression
+#' 
+#' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+#'
+#' @export
+#' 
+#' @examples
+#' n <- 30
+#' X <- rnorm(n, mean = 10)
+#' Y <- 2.4 * X + rnorm(n, mean = 1)
+#' b <- 2
+#' SSPlot(X, Y, b)
+#'
+#' \dontrun{
+#' if (require(manipulate)) {
+#'   manipulate(SSPlot(X, Y, b), b = slider(-10, 10, step = 0.1))
+#' }}
 SSPlot <- function(X, Y, b){
   n <- length(X)
   SSy <- sum((Y - (X * b + (mean(Y) - b * mean(X))))^2)

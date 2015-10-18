@@ -1,22 +1,22 @@
-##' Given a mean (\code{mu}) and standard deviation (\code{s}), plot 
-##' the normal distribution.
-##'
-##' @title Plot a normal distribution
-##' 
-##' @param mu numeric. The mean.
-##' @param s numeric. The standard deviation.
-##' 
-##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
-##'
-##' @export
-##'
-##' @examples
-##' \dontrun{
-##' if (require(manipulate)) {
-##'   manipulate(normal_dist(mu, s),
-##'              mu = slider(-10, 10),
-##'              s = slider(0.01, 10))
-##' }}
+#' Given a mean (\code{mu}) and standard deviation (\code{s}), plot 
+#' the normal distribution.
+#'
+#' @title Plot a normal distribution
+#' 
+#' @param mu numeric. The mean.
+#' @param s numeric. The standard deviation.
+#' 
+#' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (require(manipulate)) {
+#'   manipulate(normal_dist(mu, s),
+#'              mu = slider(-10, 10),
+#'              s = slider(0.01, 10))
+#' }}
 NormalDist <- function(mu, s){
   x <- seq(mu - 3 * s, mu + 3 * s, by = 0.1)
   curve(dnorm(x, mu, sd = s),

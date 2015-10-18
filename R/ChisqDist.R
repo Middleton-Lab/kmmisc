@@ -1,19 +1,19 @@
-##' Given the degrees of freedom (\code{df}), plot a chi-squared
-##' distribution.
-##'
-##' @title Plot a Chi-squared distribution
-##' 
-##' @param df Degrees of freedom
-##' 
-##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
-##'
-##' @export
-##'
-##' @examples
-##' \dontrun{
-##' if (require(manipulate)) {
-##'   manipulate( chisq_dist(df), df = slider(1, 20) )
-##' }}
+#' Given the degrees of freedom (\code{df}), plot a chi-squared
+#' distribution.
+#'
+#' @title Plot a Chi-squared distribution
+#' 
+#' @param df Degrees of freedom
+#' 
+#' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (require(manipulate)) {
+#'   manipulate( chisq_dist(df), df = slider(1, 20) )
+#' }}
 ChisqDist <- function (df) {
   crit <- qchisq(0.95, df)
   curve(dchisq(x, df),

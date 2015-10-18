@@ -1,18 +1,18 @@
-##' Plot the relationship between the Z and t distributions.
-##' 
-##' @title Plot the relationship between the Z and t distributions.
-##' 
-##' @param n numeric. Number of observations.
-##' 
-##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
-##'
-##' @export
-##'
-##' @examples
-##' \dontrun{
-##' if (require(manipulate)) {
-##'   manipulate( Z_from_t(n), n = slider(2, 50) )
-##' }}
+#' Plot the relationship between the Z and t distributions.
+#' 
+#' @title Plot the relationship between the Z and t distributions.
+#' 
+#' @param n numeric. Number of observations.
+#' 
+#' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' if (require(manipulate)) {
+#'   manipulate( Z_from_t(n), n = slider(2, 50) )
+#' }}
 Z_and_t <- function (n){
   df <- n - 1
   curve(dnorm(x), from = -4, to = 4,

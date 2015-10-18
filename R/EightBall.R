@@ -1,17 +1,17 @@
-##' Ask the magic eight ball a question, and it will reply.
-##' 
-##' @title  Ask the Magic Eight Ball
-##' 
-##' @param question A string that you would like the eight ball to
-##' evaluate.
-##' 
-##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
-##'
-##' @export
-##'
-##' @examples
-##' EightBall("Should I learn S4 methods?")
-##' 
+#' Ask the magic eight ball a question, and it will reply.
+#' 
+#' @title  Ask the Magic Eight Ball
+#' 
+#' @param question A string that you would like the eight ball to
+#' evaluate.
+#' 
+#' @author Kevin Middleton (\email{middletonk@@missouri.edu})
+#'
+#' @export
+#'
+#' @examples
+#' EightBall("Should I learn S4 methods?")
+#' 
 EightBall <- function(question){
   if (grepl("\\?", question) != TRUE)
     stop("You must ask the magic eight ball a question.")
