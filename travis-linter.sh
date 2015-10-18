@@ -3,11 +3,7 @@ set -e
 
 exitstatus=0
 
-<<<<<<< HEAD
 for file in .R/*.R
-=======
-for file in *.R
->>>>>>> origin/master
 do
     Rscript -e "lintr::lint(\"$file\")"
     outputbytes=`Rscript -e "lintr::lint(\"$file\")" | grep ^ | wc -c`
