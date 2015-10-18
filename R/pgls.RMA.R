@@ -36,7 +36,6 @@ pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
 
   r2 <- summary(object)$r.squared
 
-  yvar <- all.vars(terms(object$formula))[1]
   xvar <- all.vars(terms(object$formula))[2]
   y <- object$y
   x <- object$x[, xvar]
@@ -58,13 +57,13 @@ pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
     (1 + 0.5 * r2)
 
   # CI
-  lower <- b1 - qt(1 - (1 - param.CI)/2, df = df_phyl) * SEb1
-  upper <- b1 + qt(1 - (1 - param.CI)/2, df = df_phyl) * SEb1
+  lower <- b1 - qt(1 - (1 - param.CI) / 2, df = df_phyl) * SEb1
+  upper <- b1 + qt(1 - (1 - param.CI) / 2, df = df_phyl) * SEb1
 
   # Test vs. h0
   # Following phytools::phyl.RMA()
   t <- abs(log(abs(b1)) - log(abs(h0))) /
-    sqrt((1 - r2) / (length(object$data$phy$tip.label) - 2))
+    sqrt( (1 - r2) / (length(object$data$phy$tip.label) - 2) )
   P <- 2 * pt(t, df = df_phyl, lower.tail = FALSE)
 
   outlist <- list(slope.RMA = b1,

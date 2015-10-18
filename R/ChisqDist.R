@@ -2,9 +2,9 @@
 #' distribution.
 #'
 #' @title Plot a Chi-squared distribution
-#' 
+#'
 #' @param df Degrees of freedom
-#' 
+#'
 #' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 #'
 #' @export
@@ -19,10 +19,10 @@ ChisqDist <- function (df) {
   curve(dchisq(x, df),
         from = 0,
         to = 40,
-        xlab = expression(chi^2),
+        xlab = expression(chi ^ 2),
         ylab = "Probability",
         main = paste("df =", df, "  Critical value =",
-          format(crit, digits = 3)), 
+          format(crit, digits = 3)),
         lwd = 2,
         xaxs = "i",
         yaxs = "i",

@@ -1,9 +1,9 @@
 #' Plot the relationship between the Z and t distributions.
-#' 
+#'
 #' @title Plot the relationship between the Z and t distributions.
-#' 
+#'
 #' @param n numeric. Number of observations.
-#' 
+#'
 #' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 #'
 #' @export
@@ -29,4 +29,3 @@ Z_and_t <- function (n){
   y <- dt(x, df = df)
   lines(x, y, col = "red", lwd = 6)
 }
-

@@ -2,9 +2,9 @@
 #' interval (\code{lambda}).
 #'
 #' @title Plot a Poisson distribution.
-#' 
+#'
 #' @param lambda Numeric. Mean number of successes per interval.
-#' 
+#'
 #' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 #'
 #' @export
@@ -22,7 +22,7 @@ PoissonDist <- function (lambda){
           col = "red",
           xlab = "X Successes",
           ylab = "Probability",
-          main = bquote(mu == .(lambda)), 
+          main = bquote(mu == .(lambda)),
           xaxs = "i",
           yaxs = "i",
           cex.axis = 1.5,

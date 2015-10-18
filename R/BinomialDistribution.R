@@ -2,10 +2,10 @@
 #' \code{n}, this function plots the resulting binomial distribution.
 #'
 #' @title Plot of a binomial distribution
-#' 
+#'
 #' @param p Numeric. Probability of success for each trial
 #' @param n Numeric. Number of trials
-#' 
+#'
 #' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 #'
 #' @export
@@ -21,9 +21,9 @@
 #' }
 #' }
 BinomialDist <- function(p = 0.5, n = 18) {
-  barchart( dbinom(0:n, n, p) ~ as.factor(0:n), 
-                   horizontal = FALSE, 
-                   ylab = "Probablility", 
+  barchart( dbinom(0:n, n, p) ~ as.factor(0:n),
+                   horizontal = FALSE,
+                   ylab = "Probablility",
                    xlab = "X Successes",
                    scales = list(axs = "i"))
 }
