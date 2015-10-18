@@ -18,5 +18,10 @@
 ##' @title kmmisc
 ##' @keywords package
 ##' @import lattice ggplot2 scales tools ape
+##' @importFrom graphics abline barplot curve legend lines
+##' @importFrom graphics par plot points polygon segments text
+##' @importFrom stats dbinom dchisq dnorm dpois dt
+##' @importFrom stats predict pt qchisq qt rnorm terms
+##' @importFrom utils flush.console read.table type.convert
 
 NULL
