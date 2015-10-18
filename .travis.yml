@@ -21,6 +21,7 @@ addons:
     - r-base-dev
     - r-recommended
     - pandoc
+    - libcurl4-openssl-dev
 
 # cache local R libraries directory:
 cache:
