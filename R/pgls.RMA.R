@@ -80,6 +80,7 @@ pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
   return(outlist)
 }
 
+##' @export
 print.pgls.RMA <- function(x, digits = 4, ...){
   cat("\n")
   cat("PGLS RMA\n")
