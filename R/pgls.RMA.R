@@ -86,16 +86,14 @@ print.pgls.RMA <- function(x, digits = 4, ...){
   cat("PGLS RMA\n")
   cat("\n")
   cat(x$param.CI, "Confidence Interval\n")
-  cat("Lower\t Beta\t Upper\n")
-  cat(format(x$lower, digits = digits), "\t",
-      format(x$slope.RMA, digits = digits), "\t",
-      format(x$upper, digits = digits), "\n")
+  cat("\tBeta Est.:\t", format(x$slope.RMA, digits = digits), "\n")
+  cat("\tLower Bound:\t", format(x$lower, digits = digits), "\n")
+  cat("\tUpper Bound:\t", format(x$upper, digits = digits), "\n")
   cat("\n")
   cat("Intercept =", x$intercept, "\n")
   cat("\n")
-  cat("h0\t df\t t\t P\n")
-  cat(format(x$h0, digits = digits), "\t",
-      format(x$df_phyl, digits = digits), "\t",
-      format(x$t, digits = digits), "\t",
-      format(x$P, digits = digits), "\n\n")
+  cat("h0:\t", format(x$h0, digits = digits), "\n")
+  cat("df:\t", format(x$df_phyl, digits = digits), "\n")
+  cat("t:\t", format(x$t, digits = digits), "\n")
+  cat("P:\t", format(x$P, digits = digits), "\n")
 }
