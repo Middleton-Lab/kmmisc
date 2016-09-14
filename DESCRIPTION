@@ -6,7 +6,9 @@ LazyData: yes
 Type: Package
 LazyLoad: yes
 Author: Kevin Middleton
-Description: My miscellaneous functions
+Description: My miscellaneous functions. Many are designed for
+    teaching statistics. Some are extensions to phylogenetic
+    comparative methods.
 Version: 0.1-6
 Date: 2015-08-13
 Depends:
@@ -38,3 +40,4 @@ Collate:
     'expand.dft.R'
     'pgls.RMA.R'
     'plot_mrb.R'
+RoxygenNote: 5.0.1
