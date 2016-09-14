@@ -1,3 +1,9 @@
 language: r
-sudo: required
-
+r:
+  - release
+  - devel
+cache: packages
+sudo: false
+r_packages:
+  - smatr
+  - ggplot2
