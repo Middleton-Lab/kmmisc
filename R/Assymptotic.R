@@ -7,6 +7,7 @@
 #' @importFrom phytools phyl.RMA
 #' @importFrom caper comparative.data pgls
 #' @importFrom smatr sma
+#' @importFrom ape compute.brlen rtree
 #'
 Assymptotic <- function(){
   set.seed(10)
@@ -23,8 +24,8 @@ Assymptotic <- function(){
   phyl.RMA(x, y, tr)$RMA.beta
 
   M <- data.frame(x, y, species = tr$tip.label)
-  cd <- comparative.data(phy = tr, data = M, "species")
-  pgls(y ~ x, cd)
+  cd <- caper::comparative.data(phy = tr, data = M, "species")
+  caper::pgls(y ~ x, cd)
 
-  sma(y ~ x)
+  smatr::sma(y ~ x)
 }

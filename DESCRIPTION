@@ -9,19 +9,19 @@ Author: Kevin Middleton
 Description: My miscellaneous functions. Many are designed for
     teaching statistics. Some are extensions to phylogenetic
     comparative methods.
-Version: 0.1-6
-Date: 2015-08-13
+Version: 0.2
+Date: 2016-09-14
 Depends:
-    R (>= 3.0),
+    R (>= 3.3),
     lattice,
     ggplot2,
     scales,
-    tools,
-    ape
+    tools
 Imports:
-    caper,
+    ape,
     phytools,
-    smatr
+    smatr,
+    caper
 Encoding: UTF-8
 Collate:
     'kmmisc.R'
