@@ -5,8 +5,8 @@
 #' @return data.frame of fm
 #' @export
 #'
-unpack_map2stan <- function(fm) {
-  post <- extract.samples(fm)
+unpack_map2stan <- function(fm, ...) {
+  post <- extract.samples(fm, ...)
   p <- precis(fm, depth = 2)@output
   param_est <- rownames(p)
 
@@ -19,11 +19,9 @@ unpack_map2stan <- function(fm) {
         out[[counter]] <- param[, j]
         counter <- counter + 1
       }
-    } else if (is.array(param)) {
+    } else {
       out[[counter]] <- param
       counter <- counter + 1
-    } else {
-      stop("column(s) not matrix or array")
     }
   }
   out_df <- as.data.frame(out)
