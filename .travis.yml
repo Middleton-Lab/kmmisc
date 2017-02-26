@@ -7,3 +7,4 @@ sudo: false
 r_packages:
   - smatr
   - ggplot2
+  - caper
