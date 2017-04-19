@@ -34,11 +34,6 @@ OCAD <- expand.dft(OCAD, col.exp = "Count")
 table(OCAD)
 
 }
-\author{
-Modified for the \code{abd} package by Kevin Middleton
-  from a function posted by Marc Schwartz to the r-help mailing
-  list.
-}
 \references{
 See
   \url{https://stat.ethz.ch/pipermail/r-help/2009-January/185561.html}
@@ -47,4 +42,8 @@ See
 \seealso{
 \code{\link{table}}
 }
-
+\author{
+Modified for the \code{abd} package by Kevin Middleton
+  from a function posted by Marc Schwartz to the r-help mailing
+  list.
+}

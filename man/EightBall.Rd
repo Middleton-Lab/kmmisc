@@ -20,4 +20,3 @@ EightBall("Should I learn S4 methods?")
 \author{
 Kevin Middleton (\email{middletonk@missouri.edu})
 }
-

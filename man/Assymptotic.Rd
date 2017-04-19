@@ -9,4 +9,3 @@ Assymptotic()
 \description{
 Assymptotic equivalence of RMA and phyl.RMA()
 }
-

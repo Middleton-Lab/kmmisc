@@ -23,4 +23,3 @@ if (require(manipulate)) {
 \author{
 Kevin Middleton (\email{middletonk@missouri.edu})
 }
-

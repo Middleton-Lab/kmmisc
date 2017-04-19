@@ -17,4 +17,3 @@ See \url{http://goo.gl/fNMKjB} for more information.
 \author{
 Kevin Middleton (\email{middletonk@missouri.edu})
 }
-

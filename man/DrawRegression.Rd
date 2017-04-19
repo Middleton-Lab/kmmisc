@@ -35,4 +35,3 @@ DrawRegression(x, fm)
 \author{
 Kevin Middleton (\email{middletonk@missouri.edu})
 }
-

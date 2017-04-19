@@ -35,4 +35,3 @@ DrawSegment(coef(fm)[2], coef(fm)[1], x)
 \author{
 Kevin Middleton (\email{middletonk@missouri.edu})
 }
-

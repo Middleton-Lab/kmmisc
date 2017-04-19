@@ -33,4 +33,3 @@ chosen, the log-likelihood is plotted.
 \author{
 Kevin Middleton (\email{middletonk@missouri.edu})
 }
-

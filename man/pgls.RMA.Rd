@@ -41,4 +41,3 @@ Kevin Middleton (\email{middletonk@missouri.edu}) with
   code modified from \code{phytools::phyl.RMA()} written by Liam
   Revell.
 }
-

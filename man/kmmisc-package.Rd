@@ -24,4 +24,3 @@ Kevin Middleton \email{middletonk@missouri.edu}
 Maintainer: Kevin Middleton \email{middletonk@missouri.edu}
 }
 \keyword{package}
-
