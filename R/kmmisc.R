@@ -19,6 +19,7 @@
 #' @keywords package
 #' @import lattice ggplot2 scales tools
 #' @importFrom rethinking HPDI precis extract.samples
+#' @importFrom phytools phyl.RMA
 #' @importFrom graphics abline barplot curve legend lines
 #' @importFrom graphics par plot points polygon segments text
 #' @importFrom stats dbinom dchisq dnorm dpois dt

@@ -42,7 +42,7 @@ pgls.RMA <- function(object, h0 = 1, param.CI = 0.95){
   names(y) <- object$data$phy$tip.label
   names(x) <- object$data$phy$tip.label
 
-  rma.betas <- phyl.RMA(x, y, object$data$phy)$RMA.beta
+  rma.betas <- phytools::phyl.RMA(x, y, object$data$phy)$RMA.beta
 
   # RMA betas
   b0 <- rma.betas[1]

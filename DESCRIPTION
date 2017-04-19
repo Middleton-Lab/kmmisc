@@ -20,13 +20,11 @@ Depends:
 Imports:
     ape,
     phytools,
-    smatr,
-    caper,
     rethinking
 Encoding: UTF-8
+Remotes: rmcelreath/rethinking
 Collate:
     'kmmisc.R'
-    'Assymptotic.R'
     'BinomialDistribution.R'
     'ChisqDist.R'
     'DrawRegression.R'
