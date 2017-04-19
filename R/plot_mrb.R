@@ -79,7 +79,7 @@ plot_mrb <- function(logfile = NULL,
                color = I("blue"), lwd = lwd) +
     geom_line(lwd = lwd) +
     ylab(ylabel) + xlab("Generation") +
-    scale_x_continuous(label = scientific_10) +
+    scale_x_continuous(labels = scientific_10) +
     annotate("text", label = label_txt,
              x = (burnin_gen - 0.08 * burnin_gen),
              y = max(mb_log$parameter),

@@ -9,8 +9,8 @@ Author: Kevin Middleton
 Description: My miscellaneous functions. Many are designed for
     teaching statistics. Some are extensions to phylogenetic
     comparative methods.
-Version: 0.2
-Date: 2016-09-14
+Version: 0.3
+Date: 2017-04-19
 Depends:
     R (>= 3.3),
     lattice,
@@ -21,7 +21,8 @@ Imports:
     ape,
     phytools,
     smatr,
-    caper
+    caper,
+    rethinking
 Encoding: UTF-8
 Collate:
     'kmmisc.R'
@@ -32,6 +33,7 @@ Collate:
     'DrawSegment.R'
     'EightBall.R'
     'ExcelDateToRDate.R'
+    'HPDI_test.R'
     'NormalApproximation.R'
     'NormalDist.R'
     'PoissonDist.R'
@@ -40,4 +42,5 @@ Collate:
     'expand.dft.R'
     'pgls.RMA.R'
     'plot_mrb.R'
+    'unpack_map2stan.R'
 RoxygenNote: 6.0.1

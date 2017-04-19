@@ -11,8 +11,8 @@ Miscellaneous functions
 \tabular{ll}{
 Package: \tab kmmisc\cr
 Type: \tab Package\cr
-Version: \tab 0.2\cr
-Date: \tab 2016-09-14\cr
+Version: \tab 0.3\cr
+Date: \tab 2017-04-19\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr

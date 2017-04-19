@@ -1,6 +1,7 @@
 #' Unpack map or map2stan fitted model
 #'
 #' @param fm Fitted model
+#' @param ... Additional arguments passed on to `rethinking::extract.samples()`
 #'
 #' @return data.frame of fm
 #' @export
