@@ -5,6 +5,8 @@ r:
 cache: packages
 sudo: false
 r_packages:
-  - smatr
   - ggplot2
-  - caper
+  - ape
+  - scales
+  - phytools
+r_github_packages: rmcelreath/rethinking

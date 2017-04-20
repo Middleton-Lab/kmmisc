@@ -22,7 +22,6 @@ Imports:
     phytools,
     rethinking
 Encoding: UTF-8
-Remotes: rmcelreath/rethinking
 Collate:
     'kmmisc.R'
     'BinomialDistribution.R'
