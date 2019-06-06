@@ -79,3 +79,69 @@ shade_chisq <- function(q, df) {
     labs(x = TeX("$\\chi^2"), y = "Relative Likelihood")
   return(p)
 }
+
+approxdens <- function(x) {
+  dens <- density(x)
+  f <- with(dens, approxfun(x, y))
+  f(x)
+}
+
+shade_quantiles <- function(y, lower, upper) {
+  require(rethinking, quietly = TRUE)
+  y_med <- median(y)
+  y_mode <- chainmode(y)
+  
+  dt <- tibble(y) %>%
+    mutate(dy = approxdens(y),
+           p = percent_rank(y), 
+           pcat = as.factor(cut(p, breaks = c(lower, upper),
+                                include.lowest = TRUE)))
+  
+  ggplot(dt, aes(y, dy)) +
+    geom_ribbon(aes(ymin = 0, ymax = dy, fill = pcat)) +
+    geom_line() +
+    scale_fill_brewer(guide = "none") +
+    geom_vline(xintercept = y_med, color = "red") +
+    annotate("text", x = y_med, y = 0,
+             label = "Median", color = "red",
+             hjust = 0) +
+    geom_vline(xintercept = y_mode, color = "blue") +
+    annotate("text", x = y_mode, y = 0.05,
+             label = "Mode", color = "blue",
+             hjust = 0) +
+    labs(y = "Density", title = "Quantile")
+}
+
+shade_HPDI <- function(y, prob = 0.89) {
+  require(rethinking, quietly = TRUE)
+  y_med <- median(y)
+  y_mode <- chainmode(y)
+  HPD <- HPDI(y, prob = prob) %>% as.numeric()
+  
+  dt <- tibble(y) %>%
+    mutate(dy = approxdens(y),
+           p = percent_rank(y), 
+           pcat = as.factor(cut(y, breaks = c(HPD[1], HPD[2]),
+                                include.lowest = TRUE)))
+  
+  ggplot(dt, aes(y, dy)) +
+    geom_ribbon(aes(ymin = 0, ymax = dy, fill = pcat)) +
+    geom_line() +
+    scale_fill_brewer(guide = "none") +
+    geom_vline(xintercept = y_med, color = "red") +
+    annotate("text", x = y_med, y = 0,
+             label = "Median", color = "red",
+             hjust = 0) +
+    geom_vline(xintercept = y_mode, color = "blue") +
+    annotate("text", x = y_mode, y = 0.05,
+             label = "Mode", color = "blue",
+             hjust = 0) +
+    labs(y = "Density", title = "HPDI")
+}
+
+compare_intervals <- function(y, lower, upper, prob) {
+  require(cowplot)
+  p1 <- shade_quantiles(y, lower, upper)
+  p2 <- shade_HPDI(y, prob)
+  plot_grid(p1, p2, nrow = 2)
+}
