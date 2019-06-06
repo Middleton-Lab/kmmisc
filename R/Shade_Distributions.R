@@ -141,6 +141,7 @@ shade_HPDI <- function(y, prob = 0.89) {
 
 compare_intervals <- function(y, lower, upper, prob) {
   require(cowplot)
+  require(tidyverse, quietly = TRUE)
   p1 <- shade_quantiles(y, lower, upper)
   p2 <- shade_HPDI(y, prob)
   plot_grid(p1, p2, nrow = 2)
