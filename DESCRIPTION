@@ -21,6 +21,8 @@ Imports:
     ape,
     phytools,
     rethinking
+Remotes:
+    rmcelreath/rethinking
 Encoding: UTF-8
 Collate:
     'kmmisc.R'
