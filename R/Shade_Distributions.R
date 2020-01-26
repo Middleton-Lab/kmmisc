@@ -1,6 +1,4 @@
 shade_normal <- function(q, tail = "both", mean = 0, sd = 1) {
-  require(tidyverse, quietly = TRUE)
-  require(cowplot)
   crit <- qnorm(q, mean, sd)
   M <- tibble(x = seq(-4, 4, length = 200),
                   y = dnorm(x))
@@ -20,9 +18,6 @@ shade_normal <- function(q, tail = "both", mean = 0, sd = 1) {
 }
 
 shade_t <- function(q, df, tail = "both") {
-  require(tidyverse, quietly = TRUE)
-  require(cowplot)
-  require(latex2exp, quietly = TRUE)
   crit <- qt(q, df)
   M <- tibble(x = seq(-4, 4, length = 200),
                   y = dt(x, df))
@@ -42,9 +37,6 @@ shade_t <- function(q, df, tail = "both") {
 }
 
 shade_F <- function(q, df1, df2, vline = NULL) {
-  require(tidyverse, quietly = TRUE)
-  require(cowplot)
-  require(latex2exp, quietly = TRUE)
   crit <- qf(q, df1, df2, lower.tail = FALSE)
   if (!is.null(vline)) {
     x_max <- max(vline * 1.05, crit * 1.5)
@@ -64,9 +56,6 @@ shade_F <- function(q, df1, df2, vline = NULL) {
 }
 
 shade_chisq <- function(q, df) {
-  require(tidyverse, quietly = TRUE)
-  require(cowplot)
-  require(latex2exp, quietly = TRUE)
   crit <- qchisq(q, df, lower.tail = FALSE)
   M <- tibble(x = seq(0.1, crit * 1.5, length = 200),
                   y = dchisq(x, df))
@@ -90,13 +79,13 @@ shade_quantiles <- function(y, lower, upper) {
   require(rethinking, quietly = TRUE)
   y_med <- median(y)
   y_mode <- chainmode(y)
-  
+
   dt <- tibble(y) %>%
     mutate(dy = approxdens(y),
-           p = percent_rank(y), 
+           p = percent_rank(y),
            pcat = as.factor(cut(p, breaks = c(lower, upper),
                                 include.lowest = TRUE)))
-  
+
   ggplot(dt, aes(y, dy)) +
     geom_ribbon(aes(ymin = 0, ymax = dy, fill = pcat)) +
     geom_line() +
@@ -117,13 +106,13 @@ shade_HPDI <- function(y, prob = 0.89) {
   y_med <- median(y)
   y_mode <- chainmode(y)
   HPD <- HPDI(y, prob = prob) %>% as.numeric()
-  
+
   dt <- tibble(y) %>%
     mutate(dy = approxdens(y),
-           p = percent_rank(y), 
+           p = percent_rank(y),
            pcat = as.factor(cut(y, breaks = c(HPD[1], HPD[2]),
                                 include.lowest = TRUE)))
-  
+
   ggplot(dt, aes(y, dy)) +
     geom_ribbon(aes(ymin = 0, ymax = dy, fill = pcat)) +
     geom_line() +

@@ -4,8 +4,7 @@
 \alias{plot_mrb}
 \title{Plot MrBayes log file}
 \usage{
-plot_mrb(logfile = NULL, burnin = 0.25, lwd = 1.5, cutoff = 0.05,
-  ideal = 0.01)
+plot_mrb(logfile = NULL, burnin = 0.25, lwd = 1.5, cutoff = 0.05, ideal = 0.01)
 }
 \arguments{
 \item{logfile}{The MrBayes log file to be loaded. If \code{logfile

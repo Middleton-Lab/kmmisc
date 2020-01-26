@@ -11,11 +11,11 @@ Miscellaneous functions
 \tabular{ll}{
 Package: \tab kmmisc\cr
 Type: \tab Package\cr
-Version: \tab 0.3\cr
-Date: \tab 2017-04-19\cr
+Version: \tab 0.4\cr
+Date: \tab 2020-01-25\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
-LazyData: \tab yes\cr
+LazyData: \tab yes\c
 }
 }
 \author{
